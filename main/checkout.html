@@ -1,0 +1,38 @@
+<?php
+$title = "Checkout";
+
+$id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: missing ID.');
+
+include_once (__Dir__.'/../config/database.php');
+include_once (__Dir__.'/../objects/product.php');
+include_once (__Dir__.'/../objects/category.php');
+
+$database = new Database();
+$db = $database->getConnection();
+
+$product = new Product($db);
+$product->id = $id;
+$product->readOne();
+
+include_once("header.php");
+
+echo"<div id=\"check-cont\">
+
+            echo "
+            <div class=\"check-card\">
+                <div class=\"check-img\">
+                    <img class=\"product-img\" src=\"{$img_link}\"></img>
+                </div>
+
+                <div class=\"check-details\">
+                    <p><b>{$name}</b></p>
+                    <p style=\"color: red;\"><b>{$price}</b></p>
+                    <p class=\"prod-desc\">{$description}</p>
+                    <button type=\"submit\" onclick=\"location.href='checkout.php?id={$id}'\" class=\"buy-btn\"><b> BUY </b></button>
+                </div>
+            </div>
+            ";
+
+echo "</div>";
+
+?>

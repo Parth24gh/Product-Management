@@ -1,0 +1,47 @@
+.left-margin{
+	margin:0 .5em 0 0;
+}
+
+.right-button-margin{
+	margin: 0 0 1em 0;
+	overflow: hidden;
+}
+
+/* some changes in bootstrap modal */
+.modal-body {
+	padding: 20px 20px 0px 20px !important;
+	text-align: center !important;
+}
+
+.modal-footer{
+	text-align: center !important;
+}
+
+.product-table{
+	text-align: center;
+}
+
+body{
+	height: .1em;
+	background: linear-gradient(180deg, rgb(155, 149, 255) 0%, rgba(9, 0, 173, 0.3) 80%, rgba(9, 0, 173, 0.1) 100%);
+	font-family: candara;
+}
+
+.btn{
+	font-size: 17px;
+}
+input,textarea,select{
+	font-size: 17px;
+	border: solid black 2px;
+}
+form,table{
+	font-size: 17px;
+}
+.product-img{
+	width: 80%;
+	height: 80%;
+}
+
+@media (){
+	body{}
+}
